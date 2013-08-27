@@ -22,36 +22,37 @@ find /etc/abcd/downloads.downloads /etc/abcd/downloads.d/*.download -type f 2>/d
 	INFOSTRING=$(grep "#DLI=" $DOWNLOADLIST | cut -f2- -d"=")
 	[[ "x$INFOSTRING" = "x" ]] && VERBOSE=1 || VERBOSE=0
 	cat $DOWNLOADLIST | grep -v -e "^$" -e "^#" | while read line; do
-	REMOTE_PATH=$(echo "${line}" | cut -f2- -d"=")
-	if [ -z "$(curl -I ${REMOTE_PATH} 2>/dev/null | head -n1 | grep "200 OK")" ]; then
-		echo "${REMOTE_PATH} does not exist, ignoring"
-	else
-		if [ "$(basename $REMOTE_PATH | rev | cut -f1 -d"." | rev)" = "iso" ]; then
-			JUST_DOWNLOADED=$(cat $DOWNLOAD_TRACK)
-			LOOP_PATH="${TMP_DIR}/$(echo "${line}" | cut -f1 -d"=" | cut -f2 -d:)"
-			LOCAL_PATH="${FILE_LOCATION}/install/$(echo "${line}" | cut -f1 -d"=" | cut -f3 -d:)"
-			if [ ! -e "${LOCAL_PATH}" ]; then
-				[[ "x$VERBOSE" = "x1" ]] && echo "${REMOTE_PATH} M+-> ${LOCAL_PATH}"
-				if [ "${JUST_DOWNLOADED}" != "${REMOTE_PATH}" ]; then
-					[[ "$(mount | grep "${TMP_DIR}")" ]] && umount $TMP_DIR
-					[[ -f "${TMP_ISO}" ]] && rm $TMP_ISO
-					wget -q -O $TMP_ISO "${REMOTE_PATH}"
-					mount -o loop,ro $TMP_ISO $TMP_DIR
-					echo "${REMOTE_PATH}" > $DOWNLOAD_TRACK
-				fi
-				mkdir -p "$(dirname "${LOCAL_PATH}")"
-				cp "${LOOP_PATH}" "${LOCAL_PATH}"
-			fi
+		REMOTE_PATH=$(echo "${line}" | cut -f2- -d"=")
+		if [ -z "$(curl -I ${REMOTE_PATH} 2>/dev/null | head -n1 | grep "200 OK")" ]; then
+			echo "${REMOTE_PATH} does not exist, ignoring"
 		else
-			LOCAL_PATH="${FILE_LOCATION}/install/$(echo "${line}" | cut -f1 -d"=")"
-			[[ -e "${LOCAL_PATH}" ]] \
-			|| ( \
-				[[ "x$VERBOSE" = "x1" ]] && echo "${REMOTE_PATH} -> ${LOCAL_PATH}"; \
-				mkdir -p "$(dirname "${LOCAL_PATH}")"; \
-				wget -q -O "${LOCAL_PATH}" "${REMOTE_PATH}" \
-			)
+			if [ "$(basename $REMOTE_PATH | rev | cut -f1 -d"." | rev)" = "iso" ]; then
+				JUST_DOWNLOADED=$(cat $DOWNLOAD_TRACK)
+				LOOP_PATH="${TMP_DIR}/$(echo "${line}" | cut -f1 -d"=" | cut -f2 -d:)"
+				LOCAL_PATH="${FILE_LOCATION}/install/$(echo "${line}" | cut -f1 -d"=" | cut -f3 -d:)"
+				if [ ! -e "${LOCAL_PATH}" ]; then
+					[[ "x$VERBOSE" = "x1" ]] && echo "${REMOTE_PATH} M+-> ${LOCAL_PATH}"
+					if [ "${JUST_DOWNLOADED}" != "${REMOTE_PATH}" ]; then
+						[[ "$(mount | grep "${TMP_DIR}")" ]] && umount $TMP_DIR
+						[[ -f "${TMP_ISO}" ]] && rm $TMP_ISO
+						wget -q -O $TMP_ISO "${REMOTE_PATH}"
+						mount -o loop,ro $TMP_ISO $TMP_DIR
+						echo "${REMOTE_PATH}" > $DOWNLOAD_TRACK
+					fi
+					mkdir -p "$(dirname "${LOCAL_PATH}")"
+					cp "${LOOP_PATH}" "${LOCAL_PATH}"
+				fi
+			else
+				LOCAL_PATH="${FILE_LOCATION}/install/$(echo "${line}" | cut -f1 -d"=")"
+				[[ -e "${LOCAL_PATH}" ]] \
+				|| ( \
+					[[ "x$VERBOSE" = "x1" ]] && echo "${REMOTE_PATH} -> ${LOCAL_PATH}"; \
+					mkdir -p "$(dirname "${LOCAL_PATH}")"; \
+					wget -q -O "${LOCAL_PATH}" "${REMOTE_PATH}" \
+				)
+			fi
 		fi
-	fi
+	done
 done
 [[ "$(mount | grep "${TMP_DIR}")" ]] && umount $TMP_DIR
 [[ -f "${TMP_ISO}" ]] && rm $TMP_ISO
