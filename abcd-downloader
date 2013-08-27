@@ -136,6 +136,7 @@ patch_gentoo() {
 		INITRD_FILE=$(find_initrd_image $grelease)
 		echo "Patching $INITRD_FILE" 
 		patch_initrd "${INITRD_FILE}" "${FILE_LOCATION}/patches/gentoolinux-initrd.patch" "patch_gentoo_dns"
+		exit 0
 	done
 }
 set -x
