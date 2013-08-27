@@ -138,5 +138,6 @@ patch_gentoo() {
 		patch_initrd "${INITRD_FILE}" "${FILE_LOCATION}/patches/gentoolinux-initrd.patch" "patch_gentoo_dns"
 	done
 }
+set -x
 
 patch_gentoo
