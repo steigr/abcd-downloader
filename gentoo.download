@@ -10,5 +10,3 @@
 @ISO:isolinux/gentoo.igz:gentoo/20130801/gentoo.igz=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130801/install-amd64-minimal-20130801.iso
 @ISO:isolinux/gentoo:gentoo/20130816/gentoo=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130816/install-amd64-minimal-20130816.iso
 @ISO:isolinux/gentoo.igz:gentoo/20130816/gentoo.igz=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130816/install-amd64-minimal-20130816.iso
-@ISO:isolinux/gentoo:gentoo/20130822/gentoo=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130822/install-amd64-minimal-20130822.iso
-@ISO:isolinux/gentoo.igz:gentoo/20130822/gentoo.igz=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130822/install-amd64-minimal-20130822.iso
