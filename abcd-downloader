@@ -41,7 +41,7 @@ find /etc/abcd/downloads.downloads /etc/abcd/downloads.d/*.download -type f 2>/d
 					if [ "${JUST_DOWNLOADED}" != "${REMOTE_PATH}" ]; then
 						[[ "$(mount | grep "${TMP_DIR}")" ]] && umount $TMP_DIR
 						[[ -f "${TMP_ISO}" ]] && rm $TMP_ISO
-						curl -o $TMP_ISO "${REMOTE_PATH}"
+						curl -"#" -o $TMP_ISO "${REMOTE_PATH}"
 						mount -o loop,ro $TMP_ISO $TMP_DIR
 						echo "${REMOTE_PATH}" > $DOWNLOAD_TRACK
 					fi
@@ -54,7 +54,7 @@ find /etc/abcd/downloads.downloads /etc/abcd/downloads.d/*.download -type f 2>/d
 				|| ( \
 					[[ "x$VERBOSE" = "x1" ]] && echo "${REMOTE_PATH} -> ${LOCAL_PATH}"; \
 					mkdir -p "$(dirname "${LOCAL_PATH}")"; \
-					curl -o "${LOCAL_PATH}" "${REMOTE_PATH}" \
+					curl -"#" -o "${LOCAL_PATH}" "${REMOTE_PATH}" \
 				)
 			fi
 		fi
