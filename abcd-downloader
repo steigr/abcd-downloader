@@ -31,7 +31,7 @@ find /etc/abcd/downloads.downloads /etc/abcd/downloads.d/*.download -type f 2>/d
 			LOOP_PATH="${TMP_DIR}/$(echo "${line}" | cut -f1 -d"=" | cut -f2 -d:)"
 			LOCAL_PATH="${FILE_LOCATION}/install/$(echo "${line}" | cut -f1 -d"=" | cut -f3 -d:)"
 			if [ ! -e "${LOCAL_PATH}" ]; then
-				[[ "x$VERBOSE"= "x1" ]] && echo "${REMOTE_PATH} M+-> ${LOCAL_PATH}"
+				[[ "x$VERBOSE" = "x1" ]] && echo "${REMOTE_PATH} M+-> ${LOCAL_PATH}"
 				if [ "${JUST_DOWNLOADED}" != "${REMOTE_PATH}" ]; then
 					[[ "$(mount | grep "${TMP_DIR}")" ]] && umount $TMP_DIR
 					[[ -f "${TMP_ISO}" ]] && rm $TMP_ISO
