@@ -5,10 +5,10 @@
 @ISO:isolinux/gentoo:gentoo/20130718/gentoo=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130718/install-amd64-minimal-20130718.iso
 @ISO:isolinux/gentoo.igz:gentoo/20130718/gentoo.igz=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130718/install-amd64-minimal-20130718.iso
 @ISO:isolinux/gentoo:gentoo/20130725/gentoo=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130725/install-amd64-minimal-20130725.iso
-@ISO:isolinux/gentoo.igz:gentoo/20130725/gentoo.igz=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130725/install-amd64-minimal-201307258.iso
+@ISO:isolinux/gentoo.igz:gentoo/20130725/gentoo.igz=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130725/install-amd64-minimal-20130725.iso
 @ISO:isolinux/gentoo:gentoo/20130801/gentoo=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130801/install-amd64-minimal-20130801.iso
-@ISO:isolinux/gentoo.igz:gentoo/20130801/gentoo.igz=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130801/install-amd64-minimal-201308018.iso
+@ISO:isolinux/gentoo.igz:gentoo/20130801/gentoo.igz=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130801/install-amd64-minimal-20130801.iso
 @ISO:isolinux/gentoo:gentoo/20130816/gentoo=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130816/install-amd64-minimal-20130816.iso
-@ISO:isolinux/gentoo.igz:gentoo/20130816/gentoo.igz=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130816/install-amd64-minimal-201308168.iso
+@ISO:isolinux/gentoo.igz:gentoo/20130816/gentoo.igz=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130816/install-amd64-minimal-20130816.iso
 @ISO:isolinux/gentoo:gentoo/20130822/gentoo=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130822/install-amd64-minimal-20130822.iso
-@ISO:isolinux/gentoo.igz:gentoo/20130822/gentoo.igz=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130822/install-amd64-minimal-201308228.iso
+@ISO:isolinux/gentoo.igz:gentoo/20130822/gentoo.igz=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130822/install-amd64-minimal-20130822.iso
