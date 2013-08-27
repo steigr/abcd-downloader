@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[[ "x$UPDATED" = "x1" ]] || ( cd /etc/abcd/download.d; git pull; UPDATED=1 $0; exit )
+[[ "x$UPDATED" = "x1" ]] || ( cd /etc/abcd/downloads.d; git pull; UPDATED=1 $0; exit )
 
 set -e
 #set -x
