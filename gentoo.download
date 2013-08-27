@@ -1,5 +1,5 @@
 # Gentoo 
-# DLI=Gentoo-Linux 20130425 - 20130822 (Updated: 2013-08-27)
+#DLI=Gentoo-Linux 20130425 - 20130822 (Updated: 2013-08-27)
 @ISO:isolinux/gentoo:gentoo/20130425/gentoo=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130425/install-amd64-minimal-20130425.iso
 @ISO:isolinux/gentoo.igz:gentoo/20130425/gentoo.igz=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130425/install-amd64-minimal-20130425.iso
 @ISO:isolinux/gentoo:gentoo/20130718/gentoo=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130718/install-amd64-minimal-20130718.iso
