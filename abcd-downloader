@@ -26,7 +26,12 @@ touch $DOWNLOAD_TRACK
 find /etc/abcd/downloads.downloads /etc/abcd/downloads.d/*.download -type f 2>/dev/null | while read DOWNLOADLIST; do
 	echo "Processing $DOWNLOADLIST..."
 	INFOSTRING=$(grep "#DLI=" $DOWNLOADLIST | cut -f2- -d"=")
-	[[ "x$INFOSTRING" = "x" ]] && VERBOSE=1 || VERBOSE=0
+	if [ "x$INFOSTRING" = "x" ]; then
+		VERBOSE=1
+	else
+		VERBOSE=0
+		echo "${INFOSTRING}"
+	fi
 	cat $DOWNLOADLIST | grep -v -e "^$" -e "^#" | while read line; do
 		REMOTE_PATH=$(echo "${line}" | cut -f2- -d"=")
 		if [ -z "$(curl -I ${REMOTE_PATH} 2>/dev/null | head -n1 | grep "200 OK")" ]; then
