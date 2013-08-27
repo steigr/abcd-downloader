@@ -127,15 +127,17 @@ patch_initrd() {
 }
 
 patch_gentoo_dns() {
-  cp /lib/x86_64-linux-gnu/libnss_dns* "${TMP}/lib"
+	cp /lib/x86_64-linux-gnu/libnss_dns* "${TMP}/lib"
 	cp /lib/x86_64-linux-gnu/libresolv*  "${TMP}/lib"
 }
 
 patch_gentoo() {
 	find "${FILE_LOCATION}/install/gentoo" -mindepth 1 -maxdepth 1 -type d | while read grelease; do
 		INITRD_FILE=$(find_initrd_image $grelease)
-		echo "Patching $INITRD_FILE" 
-		patch_initrd "${INITRD_FILE}" "${FILE_LOCATION}/patches/gentoolinux-initrd.patch" "patch_gentoo_dns"
+		if [ "x${INITRD_FILE}" != "x" ]; then
+			echo "Patching $INITRD_FILE" 
+			patch_initrd "${INITRD_FILE}" "${FILE_LOCATION}/patches/gentoolinux-initrd.patch" "patch_gentoo_dns"
+		fi
 	done
 }
 
