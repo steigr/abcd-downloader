@@ -1,6 +1,12 @@
 #!/bin/bash
 
-[[ "x$UPDATED" = "x1" ]] || ( cd /etc/abcd/downloads.d; git pull; UPDATED=1 $0; exit )
+if [ "x$UPDATED" = "x1" ]; then
+  cd /etc/abcd/downloads.d
+  git pull
+  UPDATED=1 $0
+  exit
+fi
+UPDATED=0
 
 set -e
 #set -x
