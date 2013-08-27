@@ -46,7 +46,7 @@ find /etc/abcd/downloads.downloads /etc/abcd/downloads.d/*.download -type f 2>/d
 			LOCAL_PATH="${FILE_LOCATION}/install/$(echo "${line}" | cut -f1 -d"=")"
 			[[ -e "${LOCAL_PATH}" ]] \
 			|| ( \
-				[[ "x$VERBOSE"= "x1" ]] && echo "${REMOTE_PATH} -> ${LOCAL_PATH}"; \
+				[[ "x$VERBOSE" = "x1" ]] && echo "${REMOTE_PATH} -> ${LOCAL_PATH}"; \
 				mkdir -p "$(dirname "${LOCAL_PATH}")"; \
 				wget -q -O "${LOCAL_PATH}" "${REMOTE_PATH}" \
 			)
