@@ -98,10 +98,10 @@ compress_initrd() {
 	cd "${DIR}"
 	case ${FORMAT} in
 		XZ)
-			find . -print | cpio -o -H newc | xz -9 -c --format=lzma - > "${FILE}"
+			find . -print | cpio -o -H newc 2>/dev/null | xz -9 -c --format=lzma - > "${FILE}"
 		;;
 		gzip)
-			find . -print | cpio -o -H newc | gzip -9 -c - > "${FILE}"
+			find . -print | cpio -o -H newc 2>/dev/null | gzip -9 -c - > "${FILE}"
 		;;
 	esac
 }
