@@ -1,12 +1,12 @@
 # Gentoo 
 #DLI=Gentoo-Linux 20130425 - 20130822 (Updated: 2013-08-27)
-@ISO:isolinux/gentoo:gentoo/20130425/gentoo=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130425/install-amd64-minimal-20130425.iso
-@ISO:isolinux/gentoo.igz:gentoo/20130425/gentoo.igz=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130425/install-amd64-minimal-20130425.iso
-@ISO:isolinux/gentoo:gentoo/20130718/gentoo=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130718/install-amd64-minimal-20130718.iso
-@ISO:isolinux/gentoo.igz:gentoo/20130718/gentoo.igz=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130718/install-amd64-minimal-20130718.iso
-@ISO:isolinux/gentoo:gentoo/20130725/gentoo=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130725/install-amd64-minimal-20130725.iso
-@ISO:isolinux/gentoo.igz:gentoo/20130725/gentoo.igz=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130725/install-amd64-minimal-20130725.iso
-@ISO:isolinux/gentoo:gentoo/20130801/gentoo=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130801/install-amd64-minimal-20130801.iso
-@ISO:isolinux/gentoo.igz:gentoo/20130801/gentoo.igz=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130801/install-amd64-minimal-20130801.iso
-@ISO:isolinux/gentoo:gentoo/20130816/gentoo=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130816/install-amd64-minimal-20130816.iso
-@ISO:isolinux/gentoo.igz:gentoo/20130816/gentoo.igz=http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/releases/amd64/autobuilds/20130816/install-amd64-minimal-20130816.iso
+@ISO:isolinux/gentoo:gentoo/20130425/gentoo=http://ftp.wh2.tu-dresden.de/pub/mirrors/gentoo/releases/amd64/autobuilds/20130425/install-amd64-minimal-20130425.iso
+@ISO:isolinux/gentoo.igz:gentoo/20130425/gentoo.igz=http://ftp.wh2.tu-dresden.de/pub/mirrors/gentoo/releases/amd64/autobuilds/20130425/install-amd64-minimal-20130425.iso
+@ISO:isolinux/gentoo:gentoo/20130718/gentoo=http://ftp.wh2.tu-dresden.de/pub/mirrors/gentoo/releases/amd64/autobuilds/20130718/install-amd64-minimal-20130718.iso
+@ISO:isolinux/gentoo.igz:gentoo/20130718/gentoo.igz=http://ftp.wh2.tu-dresden.de/pub/mirrors/gentoo/releases/amd64/autobuilds/20130718/install-amd64-minimal-20130718.iso
+@ISO:isolinux/gentoo:gentoo/20130725/gentoo=http://ftp.wh2.tu-dresden.de/pub/mirrors/gentoo/releases/amd64/autobuilds/20130725/install-amd64-minimal-20130725.iso
+@ISO:isolinux/gentoo.igz:gentoo/20130725/gentoo.igz=http://ftp.wh2.tu-dresden.de/pub/mirrors/gentoo/releases/amd64/autobuilds/20130725/install-amd64-minimal-20130725.iso
+@ISO:isolinux/gentoo:gentoo/20130801/gentoo=http://ftp.wh2.tu-dresden.de/pub/mirrors/gentoo/releases/amd64/autobuilds/20130801/install-amd64-minimal-20130801.iso
+@ISO:isolinux/gentoo.igz:gentoo/20130801/gentoo.igz=http://ftp.wh2.tu-dresden.de/pub/mirrors/gentoo/releases/amd64/autobuilds/20130801/install-amd64-minimal-20130801.iso
+@ISO:isolinux/gentoo:gentoo/20130816/gentoo=http://ftp.wh2.tu-dresden.de/pub/mirrors/gentoo/releases/amd64/autobuilds/20130816/install-amd64-minimal-20130816.iso
+@ISO:isolinux/gentoo.igz:gentoo/20130816/gentoo.igz=http://ftp.wh2.tu-dresden.de/pub/mirrors/gentoo/releases/amd64/autobuilds/20130816/install-amd64-minimal-20130816.iso
